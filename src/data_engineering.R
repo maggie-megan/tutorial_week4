@@ -62,9 +62,8 @@ video_enriched <- video_features %>%
 
 user_enriched <- user_view %>%
   left_join(users, by = "user_id") %>%
-  user_enriched <- user_view %>%
   select(
-    user_id, user_name, user_handle,
+    user_id, `user_name.x`, `user_handle.x`,
     impressions_n, watched_n, watch_rate,
     like_n, follow_n, baseline_login, satiation_decay
   )
